@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "news": {
+      "0.1.1": {
+        "en": "update dm-utils to 3.2.0",
+        "de": "update dm-utils auf 3.2.0",
+        "ru": "обновление dm-utils до 3.2.0",
+        "pt": "atualizar dm-utils para 3.2.0",
+        "nl": "update dm-utils naar 3.2.0",
+        "fr": "mettre à jour dm-utils à 3.2.0",
+        "it": "aggiornamento dm-utils a 3.2.0",
+        "es": "actualización dm-utils a 3.2.0",
+        "pl": "update dm- utils to 3.2.0",
+        "uk": "оновлення dm-utils до 3.2.0",
+        "zh-cn": "更新 dm- utils 到 3. 2. 0"
+      },
       "0.1.0": {
         "en": "Ready for add to ioBroker latest repo",
         "de": "Bereit zum Hinzufügen zum neuesten ioBroker-Repository",
@@ -80,19 +93,6 @@
         "pl": "wydanie początkowe",
         "uk": "початковий випуск",
         "zh-cn": "初始版本"
-      },
-      "0.0.1": {
-        "en": "initial release",
-        "de": "Erstveröffentlichung",
-        "ru": "Начальная версия",
-        "pt": "lançamento inicial",
-        "nl": "Eerste uitgave",
-        "fr": "Première version",
-        "it": "Versione iniziale",
-        "es": "Versión inicial",
-        "pl": "Pierwsze wydanie",
-        "uk": "Початкова версія",
-        "zh-cn": "首次出版"
       }
     },
     "titleLang": {
