@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "news": {
+      "0.1.2": {
+        "en": "Keep the Device Manager in the adapter configuration instead of a separate Admin tab. Render the four live measurements through one shared HTML row template per card; Admin's read-only numeric state control otherwise adds a progress indicator for percent and bounded states.",
+        "de": "Behalten Sie den Gerätemanager in der Adapterkonfiguration statt im Admin-Tab. Rendern Sie die vier Live-Messungen über eine gemeinsame HTML-Zeilenvorlage pro Karte; Admins schreibgeschützte numerische Statusanzeige fügt sonst Werte in Prozent und Grenzen hinzu.",
+        "ru": "Храните диспетчер устройств в конфигурации адаптера, а не на отдельной вкладке «Администратор». Выполните визуализацию четырех измерений в реальном времени с помощью одного шаблона строк HTML на каждой карточке; в остальном числовой элемент управления состоянием, доступный только для чтения, добавляет индикатор выполнения измерений в процентах и ограниченных состояниях.",
+        "pt": "Configure o Device Manager no adaptador em vez de uma guia Admin separada. Faça as quatro medições ao vivo usando um modelo de linha HTML compartilhado por cartão; caso contrário, o Admin adiciona um indicador de progresso para porcentagem e estados limitados.",
+        "nl": "Houd de apparaatbeheerder in de adapterconfiguratie in plaats van op een apart tabblad Admin. Geef de vier actuele metingen weer via één gedeeld HTML-rijsjabloon per kaart; de numerieke statuscontrole van de beheerder voegt anders een voortgangsindicator toe voor percentages en begrensde staten.",
+        "fr": "Conservez le Device Manager dans la configuration de l'adaptateur au lieu d'un onglet Admin séparé. Effectuez les quatre mesures en direct via un modèle de ligne HTML partagé par carte ; le contrôle numérique en lecture seule d'Admin ajoute un indicateur de progression pour le pourcentage et les états bornés.",
+        "it": "Mantieni Device Manager nell'adattatore anziché in una scheda Admin separata. Renderizza le quattro misure in tempo reale con un modello di riga HTML condiviso per scheda; il controllo numerico di sola lettura di Admin aggiunge la percentuale e gli stati limitati.",
+        "es": "Mantenga el Device Manager en la configuración del adaptador y no en otra pestaña Admin. Renderice las cuatro mediciones en vivo a través de una plantilla de filas HTML compartida por tarjeta; el control de estado numérico del administrador añade un indicador de progreso para los estados porcentuales y acotados.",
+        "pl": "Zachowaj Menedżera urządzeń w konfiguracji adaptera zamiast osobnej karty Administrator. Renderuj cztery pomiary na żywo za pomocą jednego współdzielonego szablonu wiersza HTML na kartę; Kontrola stanu numerycznego tylko do odczytu przez administratora dodaje wskaźnik postępu dla stanów procentowych i ograniczonych.",
+        "uk": "Зберігайте Диспетчер пристроїв в конфігурації адаптера замість окремої вкладки Admin. Відтворюйте чотири вимірювання в реальному часі за допомогою одного спільного шаблону рядка HTML на картку; в іншому випадку, числовий контроль стану адміністратора, призначений лише для читання, додає індикатор прогресу для відсотків та обмежених станів.",
+        "zh-cn": "将设备管理器保留在适配器配置中，而不是单独的 “管理” 选项卡。通过每张卡片的一个共享 HTML 行模板呈现四次实时测量结果；管理员的只读数字状态控件还会添加百分比和边界状态的进度指示器。"
+      },
       "0.1.1": {
         "en": "update dm-utils to 3.2.0",
         "de": "update dm-utils auf 3.2.0",
@@ -80,19 +93,6 @@
         "pl": "Dodaj nowe funkcje i ikony do DeviceManager",
         "uk": "Додавання нових функцій та піктограм до DeviceManager",
         "zh-cn": "向设备管理器添加新功能和图标"
-      },
-      "0.0.2": {
-        "en": "initial release",
-        "de": "Erstveröffentlichung",
-        "ru": "первоначальный релиз",
-        "pt": "lançamento inicial",
-        "nl": "eerste release",
-        "fr": "version initiale",
-        "it": "rilascio iniziale",
-        "es": "lanzamiento inicial",
-        "pl": "wydanie początkowe",
-        "uk": "початковий випуск",
-        "zh-cn": "初始版本"
       }
     },
     "titleLang": {

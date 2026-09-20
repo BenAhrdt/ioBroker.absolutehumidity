@@ -35,7 +35,7 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.2 (2026-09-20)
 * Keep the Device Manager in the adapter configuration instead of a separate Admin tab. Render the four live measurements through one shared HTML row template per card; Admin's read-only numeric state control otherwise adds a progress indicator for percent and bounded states.
 
 ### 0.1.1 (2026-08-07)
@@ -50,9 +50,6 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 ### 0.0.5 (2026-07-05)
 * (BenAhrdt) Id will change in case of renameing device
 * (BenAhrdt) Add second manual calculation for compare
-
-### 0.0.4 (2026-07-05)
-* (BenAhrdt) Build Config in adapter own device object
 
 [Older changes can be found there](CHANGELOG_OLD.md)
 
