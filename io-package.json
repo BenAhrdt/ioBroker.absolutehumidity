@@ -148,25 +148,7 @@
       "deviceManager": true
     },
     "adminUI": {
-      "config": "json",
-      "tab": "json"
-    },
-    "adminTab": {
-      "singleton": true,
-      "name": {
-        "en": "Absolute Humidity",
-        "de": "Absolute Luftfeuchtigkeit",
-        "ru": "Абсолютная влажность",
-        "pt": "Umidade Absoluta",
-        "nl": "Absolute vochtigheid",
-        "fr": "Humidité absolue",
-        "it": "Umidità assoluta",
-        "es": "Humedad absoluta",
-        "pl": "Wilgotność bezwzględna",
-        "uk": "Абсолютна вологість",
-        "zh-cn": "绝对湿度"
-      },
-      "link": "jsonTab.json5"
+      "config": "json"
     },
     "dependencies": [
       {

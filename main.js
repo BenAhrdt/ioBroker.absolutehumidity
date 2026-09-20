@@ -8,11 +8,15 @@ const { calculateAbsoluteHumidity, calculateDewPointTemperature } = require('./l
 const {
 	DEVICE_ROOT,
 	STATE_ABSOLUTE_HUMIDITY,
+	STATE_DEVICE_MANAGER_HTML,
 	STATE_DEW_POINT_TEMPERATURE,
 	STATE_RELATIVE_HUMIDITY,
 	STATE_TEMPERATURE,
 } = require('./lib/modules/constants');
-const { AbsoluteHumidityDeviceManagement } = require('./lib/modules/deviceManager');
+const {
+	AbsoluteHumidityDeviceManagement,
+	createMeasurementDisplayHtml,
+} = require('./lib/modules/deviceManager');
 const {
 	createUniqueDeviceId,
 	createUniqueIdFromBase,
@@ -34,6 +38,7 @@ class Absolutehumidity extends utils.Adapter {
 
 		this.deviceManagement = null;
 		this.devices = [];
+		this.deviceManagerLanguage = 'en';
 		this.subscribedSourceIds = new Set();
 
 		this.on('ready', this.onReady.bind(this));
@@ -47,6 +52,8 @@ class Absolutehumidity extends utils.Adapter {
 	 * Is called when databases are connected and adapter received configuration.
 	 */
 	async onReady() {
+		const systemConfig = await this.getForeignObjectAsync('system.config');
+		this.deviceManagerLanguage = systemConfig?.common?.language || 'en';
 		this.deviceManagement = new AbsoluteHumidityDeviceManagement(this);
 		await this.ensureInfoStates();
 		await this.ensureDeviceRootObject();
@@ -456,7 +463,25 @@ class Absolutehumidity extends utils.Adapter {
 		} else {
 			await this.deleteObjectIfExists(`${this.getDeviceObjectId(device.id)}.${STATE_RELATIVE_HUMIDITY}`);
 		}
+		await this.ensureDeviceManagerHtmlState(device);
 		await this.deleteObjectIfExists(`${this.getDeviceObjectId(device.id)}.sources`, { recursive: true });
+	}
+
+	/**
+	 * @param {Record<string, any>} device
+	 */
+	async ensureDeviceManagerHtmlState(device) {
+		await this.setObjectNotExistsAsync(`${this.getDeviceObjectId(device.id)}.${STATE_DEVICE_MANAGER_HTML}`, {
+			type: 'state',
+			common: {
+				name: 'Device Manager display',
+				type: 'string',
+				role: 'text',
+				read: true,
+				write: false,
+			},
+			native: {},
+		});
 	}
 
 	/**
@@ -633,6 +658,12 @@ class Absolutehumidity extends utils.Adapter {
 	async updateDeviceValues(device) {
 		if (!(await this.hasValidDeviceSourceIds(device))) {
 			this.log.warn(`Skipping device "${device.name}" because it has unusable source state IDs`);
+			await this.updateDeviceManagerHtml(device, {
+				absoluteHumidity: null,
+				relativeHumidity: null,
+				temperature: null,
+				dewPointTemperature: null,
+			});
 			return;
 		}
 
@@ -662,6 +693,23 @@ class Absolutehumidity extends utils.Adapter {
 		});
 		await this.setStateChangedAsync(`${deviceObjectId}.${STATE_DEW_POINT_TEMPERATURE}`, {
 			val: dewPointTemperature,
+			ack: true,
+		});
+		await this.updateDeviceManagerHtml(device, {
+			absoluteHumidity,
+			relativeHumidity,
+			temperature,
+			dewPointTemperature,
+		});
+	}
+
+	/**
+	 * @param {Record<string, any>} device
+	 * @param {{ absoluteHumidity: number | null; relativeHumidity: number | null; temperature: number | null; dewPointTemperature: number | null }} values
+	 */
+	async updateDeviceManagerHtml(device, values) {
+		await this.setStateChangedAsync(`${this.getDeviceObjectId(device.id)}.${STATE_DEVICE_MANAGER_HTML}`, {
+			val: createMeasurementDisplayHtml(values, this.deviceManagerLanguage),
 			ack: true,
 		});
 	}
