@@ -13,10 +13,7 @@ const {
 	STATE_RELATIVE_HUMIDITY,
 	STATE_TEMPERATURE,
 } = require('./lib/modules/constants');
-const {
-	AbsoluteHumidityDeviceManagement,
-	createMeasurementDisplayHtml,
-} = require('./lib/modules/deviceManager');
+const { AbsoluteHumidityDeviceManagement, createMeasurementDisplayHtml } = require('./lib/modules/deviceManager');
 const {
 	createUniqueDeviceId,
 	createUniqueIdFromBase,
