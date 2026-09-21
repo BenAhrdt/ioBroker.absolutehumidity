@@ -35,7 +35,7 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.3 (2026-09-21)
 * Restore the regular adapter configuration page with interactive outdoor and indoor preview cards, and provide a link to the Device Manager in Config Manager.
 
 ### 0.1.2 (2026-09-20)
@@ -49,10 +49,6 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 
 ### 0.0.6 (2026-07-06)
 * (BenAhrdt) Sort devices after refresh in case of absolute humidity
-
-### 0.0.5 (2026-07-05)
-* (BenAhrdt) Id will change in case of renameing device
-* (BenAhrdt) Add second manual calculation for compare
 
 [Older changes can be found there](CHANGELOG_OLD.md)
 
