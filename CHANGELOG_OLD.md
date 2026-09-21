@@ -1,4 +1,7 @@
 # Older changes
+## 0.0.6 (2026-07-06)
+* (BenAhrdt) Sort devices after refresh in case of absolute humidity
+
 ## 0.0.5 (2026-07-05)
 * (BenAhrdt) Id will change in case of renameing device
 * (BenAhrdt) Add second manual calculation for compare

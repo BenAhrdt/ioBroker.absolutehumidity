@@ -35,7 +35,7 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.4 (2026-09-21)
 * Keep long Device Manager measurements readable with a smaller value font and at most two decimal places.
 
 ### 0.1.3 (2026-09-21)
@@ -49,9 +49,6 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 
 ### 0.1.0 (2026-07-07)
 * (BenAhrdt) Ready for add to ioBroker latest repo
-
-### 0.0.6 (2026-07-06)
-* (BenAhrdt) Sort devices after refresh in case of absolute humidity
 
 [Older changes can be found there](CHANGELOG_OLD.md)
 

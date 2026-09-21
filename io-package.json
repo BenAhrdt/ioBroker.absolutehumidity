@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "news": {
+      "0.1.4": {
+        "en": "Keep long Device Manager measurements readable with a smaller value font and at most two decimal places.",
+        "de": "Halten Sie lange Device Manager-Messungen mit kleinerer Schrift und maximal 2 Dezimalstellen lesbar.",
+        "ru": "Для чтения длинных измерений в диспетчере устройств используйте шрифт меньшего размера и не более двух десятичных знаков.",
+        "pt": "Leve medidas longas do Device Manager com uma fonte menor e no máximo duas casas decimais.",
+        "nl": "Houd lange metingen van de Device Manager leesbaar met een lettertype met een kleinere waarde en maximaal twee cijfers achter de komma.",
+        "fr": "Gardez les mesures longues du Device Manager lisibles avec une petite valeur et au plus deux décimales.",
+        "it": "Mantieni le misure lunghe di Device Manager leggibili con caratteri più piccoli e al massimo due decimali.",
+        "es": "Mantenga las medidas largas de Device Manager legibles con una fuente de valores más pequeños y como máximo dos decimales.",
+        "pl": "Długie pomiary Menedżera urządzeń są czytelne za pomocą czcionki o mniejszej wartości i co najwyżej dwóch miejsc po przecinku.",
+        "uk": "Тримайте довгі вимірювання диспетчера пристроїв читабельними за допомогою шрифту меншого значення та не більше двох знаків після коми.",
+        "zh-cn": "使用较小的数值字体保持设备管理器长度可读，最多保留两位小数。"
+      },
       "0.1.3": {
         "en": "Restore the regular adapter configuration page with interactive outdoor and indoor preview cards, and provide a link to the Device Manager in Config Manager.",
         "de": "Stellen Sie die normale Adapterkonfigurationsseite mit interaktiven Außen- und Innenvorschaukarten wieder her und geben Sie im Config Manager einen Link.",
@@ -80,19 +93,6 @@
         "pl": "Identyfikator ulegnie zmianie w przypadku zmiany nazwy urządzenia\nDodaj drugie obliczenie ręczne w celu porównania",
         "uk": "Ідентифікатор зміниться у разі перейменування пристрою\nДодати другий ручний розрахунок для порівняння",
         "zh-cn": "设备重命名时，ID 将会更改。\n添加第二个手动计算以进行比较。"
-      },
-      "0.0.4": {
-        "en": "Build Config in adapter own device object",
-        "de": "Konfiguration im eigenen Geräteobjekt des Adapters erstellen",
-        "ru": "Создайте конфигурацию в собственном объекте устройства адаптера.",
-        "pt": "Configuração de construção no objeto de dispositivo próprio do adaptador",
-        "nl": "Bouw de configuratie in het eigen apparaatobject van de adapter.",
-        "fr": "Configurer l'objet périphérique propre à l'adaptateur",
-        "it": "Costruisci la configurazione nell'oggetto dispositivo dell'adattatore",
-        "es": "Construir la configuración en el objeto de dispositivo propio del adaptador",
-        "pl": "Konfiguracja kompilacji w obiekcie własnego urządzenia adaptera",
-        "uk": "Збірка конфігурації у власному об'єкті пристрою адаптера",
-        "zh-cn": "适配器自身设备对象中的构建配置"
       }
     },
     "titleLang": {
