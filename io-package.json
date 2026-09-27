@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "news": {
+      "0.1.5": {
+        "en": "Update the repository-check dependencies and test the adapter on Node.js 26.",
+        "de": "Aktualisieren Sie die Abhängigkeiten und testen Sie den Adapter auf Node.js 26.",
+        "ru": "Обновите зависимости для проверки репозитория и протестируйте адаптер на Node.js 26.",
+        "pt": "Atualize as dependências do repositório e teste o adaptador no Node.js 26.",
+        "nl": "Werk de afhankelijkheden van de repository-check bij en test de adapter op Node.js 26.",
+        "fr": "Mettez à jour le dépôt, vérifiez les dépendances et testez l'adaptateur sur Node.js 26.",
+        "it": "Aggiorna le dipendenze del repository e testa l'adattatore su Node.js 26.",
+        "es": "Actualice las dependencias y compruebe el adaptador en Node.js 26.",
+        "pl": "Zaktualizuj zależności sprawdzania repozytorium i przetestuj adapter na Node.js 26.",
+        "uk": "Оновіть залежності перевірки сховища та протестуйте адаптер на Node.js 26.",
+        "zh-cn": "在 Node.js 26 上更新存储库检查依赖关系并测试适配器。"
+      },
       "0.1.4": {
         "en": "Keep long Device Manager measurements readable with a smaller value font and at most two decimal places.",
         "de": "Halten Sie lange Device Manager-Messungen mit kleinerer Schrift und maximal 2 Dezimalstellen lesbar.",
@@ -80,19 +93,6 @@
         "pl": "Posortuj urządzenia po odświeżeniu w przypadku wilgotności bezwzględnej",
         "uk": "Сортуйте пристрої після оновлення за умови абсолютної вологості",
         "zh-cn": "刷新后，在绝对湿度情况下对设备进行排序"
-      },
-      "0.0.5": {
-        "en": "Id will change in case of renameing device\nAdd second manual calculation for compare",
-        "de": "Die ID ändert sich, wenn das Gerät umbenannt wird.\nFüge eine zweite manuelle Berechnung zum Vergleich hinzu.",
-        "ru": "Идентификатор изменится в случае переименования устройства.\nДобавьте второй ручной расчет для сравнения.",
-        "pt": "O ID será alterado caso o dispositivo seja renomeado.\nAdicionar um segundo cálculo manual para comparação.",
-        "nl": "De ID verandert als het apparaat een andere naam krijgt.\nVoeg een tweede handmatige berekening toe ter vergelijking.",
-        "fr": "L'identifiant changera en cas de changement de nom de l'appareil.\nAjouter un deuxième calcul manuel pour la comparaison",
-        "it": "L'ID cambierà in caso di ridenominazione del dispositivo.\nAggiungi un secondo calcolo manuale per il confronto",
-        "es": "El ID cambiará en caso de que se cambie el nombre del dispositivo.\nAgregar un segundo cálculo manual para comparar",
-        "pl": "Identyfikator ulegnie zmianie w przypadku zmiany nazwy urządzenia\nDodaj drugie obliczenie ręczne w celu porównania",
-        "uk": "Ідентифікатор зміниться у разі перейменування пристрою\nДодати другий ручний розрахунок для порівняння",
-        "zh-cn": "设备重命名时，ID 将会更改。\n添加第二个手动计算以进行比较。"
       }
     },
     "titleLang": {

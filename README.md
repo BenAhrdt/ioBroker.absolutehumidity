@@ -35,7 +35,7 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.5 (2026-09-27)
 * Update the repository-check dependencies and test the adapter on Node.js 26.
 
 ### 0.1.4 (2026-09-21)
@@ -49,9 +49,6 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 
 ### 0.1.1 (2026-08-07)
 * (BenAhrdt) update dm-utils to 3.2.0
-
-### 0.1.0 (2026-07-07)
-* (BenAhrdt) Ready for add to ioBroker latest repo
 
 [Older changes can be found there](CHANGELOG_OLD.md)
 

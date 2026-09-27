@@ -1,4 +1,7 @@
 # Older changes
+## 0.1.0 (2026-07-07)
+* (BenAhrdt) Ready for add to ioBroker latest repo
+
 ## 0.0.6 (2026-07-06)
 * (BenAhrdt) Sort devices after refresh in case of absolute humidity
 
