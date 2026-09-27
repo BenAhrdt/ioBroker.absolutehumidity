@@ -35,6 +35,9 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* Update the repository-check dependencies and test the adapter on Node.js 26.
+
 ### 0.1.4 (2026-09-21)
 * Keep long Device Manager measurements readable with a smaller value font and at most two decimal places.
 
