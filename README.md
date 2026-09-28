@@ -28,7 +28,20 @@ saturation vapor pressure from temperature and relative humidity.
 Small deviations from online tables are expected because different tables often
 use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 
-![Kachel](image.png)
+<img width="927" height="590" alt="image" src="https://github.com/user-attachments/assets/15aad0cf-144b-4ccb-8d38-c8d7710aab48" />
+
+
+
+
+## Installation
+As long as the adapter is not yet listed in the stable repository, it can be installed manually from NPM. Note: NEVER install it from GitHub.
+
+Installation Link:
+[https://github.com/BenAhrdt/ioBroker.absolutehumidity](https://github.com/BenAhrdt/ioBroker.absolutehumidity)
+
+<img width="955" height="703" alt="image" src="https://github.com/user-attachments/assets/d7c43f37-30be-4a16-99f0-6e7e34164478" />
+
+
 
 ## Changelog
 <!--
@@ -51,6 +64,9 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 * (BenAhrdt) update dm-utils to 3.2.0
 
 [Older changes can be found there](CHANGELOG_OLD.md)
+
+
+The adapter was developed in collaboration with Joerg Froehner
 
 ## License
 MIT License
