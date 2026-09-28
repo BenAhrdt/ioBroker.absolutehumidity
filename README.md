@@ -61,6 +61,13 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 
 <img width="1147" height="428" alt="image" src="https://github.com/user-attachments/assets/b08264af-3350-4ffb-85ed-3ce7d15e2f5a" />
 
+## Object view
+
+<img width="935" height="386" alt="image" src="https://github.com/user-attachments/assets/de0d67d2-4935-428b-a3c8-199c9b1bdcce" />
+
+## Iobroker Forum Link
+
+[https://forum.iobroker.net/topic/85455/test-adapter-absolut-humidity](https://forum.iobroker.net/topic/85455/test-adapter-absolut-humidity)
 
 ## Changelog
 <!--
