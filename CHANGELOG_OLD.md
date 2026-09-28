@@ -2,11 +2,6 @@
 ## 0.1.1 (2026-08-07)
 * (BenAhrdt) update dm-utils to 3.2.0
 
-[Older changes can be found there](CHANGELOG_OLD.md)
-
-
-The adapter was developed in collaboration with Joerg Froehner
-
 ## 0.1.0 (2026-07-07)
 * (BenAhrdt) Ready for add to ioBroker latest repo
 
