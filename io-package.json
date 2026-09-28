@@ -161,7 +161,9 @@
       }
     ]
   },
-  "native": {},
+  "native": {
+    "configurationBackupDelayMinutes": 60
+  },
   "objects": [],
   "instanceObjects": [
     {

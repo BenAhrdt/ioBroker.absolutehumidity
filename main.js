@@ -22,6 +22,7 @@ const {
 	sanitizeId,
 } = require('./lib/modules/idUtils');
 const { translate } = require('./lib/modules/i18n');
+const { configurationBackupNeedsUpdate } = require('./lib/modules/configurationBackup');
 
 class Absolutehumidity extends utils.Adapter {
 	/**
@@ -37,6 +38,7 @@ class Absolutehumidity extends utils.Adapter {
 		this.devices = [];
 		this.deviceManagerLanguage = 'en';
 		this.subscribedSourceIds = new Set();
+		this.configurationBackupTimer = null;
 
 		this.on('ready', this.onReady.bind(this));
 		this.on('message', this.onMessage.bind(this));
@@ -55,10 +57,14 @@ class Absolutehumidity extends utils.Adapter {
 		await this.ensureInfoStates();
 		await this.ensureDeviceRootObject();
 		await this.loadDevices();
+		if (!this.devices.length && (await this.restoreDeviceConfigurationBackup(false))) {
+			this.log.info('Restored the device configuration from the instance backup');
+		}
 		await this.migrateLegacyDeviceIds();
 		await this.rebuildAllDevices();
 		await this.refreshSubscriptions();
 		await this.updateAllDevices();
+		this.scheduleConfigurationBackup();
 	}
 
 	/**
@@ -293,6 +299,87 @@ class Absolutehumidity extends utils.Adapter {
 			},
 		});
 		this.devices = devices;
+		this.scheduleConfigurationBackup();
+	}
+
+	scheduleConfigurationBackup() {
+		if (this.configurationBackupTimer) {
+			this.clearTimeout(this.configurationBackupTimer);
+			this.configurationBackupTimer = null;
+		}
+
+		const minutes = Number(this.config.configurationBackupDelayMinutes ?? 60);
+		if (!Number.isFinite(minutes) || minutes <= 0) {
+			return;
+		}
+
+		this.configurationBackupTimer = this.setTimeout(
+			() => {
+				this.configurationBackupTimer = null;
+				void this.backupDeviceConfiguration().catch(error => {
+					this.log.error(`Could not back up device configuration: ${String(error)}`);
+				});
+			},
+			Math.min(minutes, 35791) * 60 * 1000,
+		);
+	}
+
+	async backupDeviceConfiguration() {
+		const devicesFolder = await this.getObjectAsync(DEVICE_ROOT);
+		if (!devicesFolder?.native) {
+			throw new Error('The devices folder does not exist');
+		}
+
+		const instanceId = `system.adapter.${this.namespace}`;
+		const instanceObject = await this.getForeignObjectAsync(instanceId);
+		if (!instanceObject) {
+			throw new Error(`The instance object ${instanceId} does not exist`);
+		}
+
+		if (!configurationBackupNeedsUpdate(devicesFolder.native, instanceObject.native?.deviceConfigurationBackup)) {
+			return false;
+		}
+
+		instanceObject.native = {
+			...(instanceObject.native || {}),
+			deviceConfigurationBackup: structuredClone(devicesFolder.native),
+		};
+		await this.setForeignObjectAsync(instanceId, instanceObject);
+		this.log.info('Updated the device configuration backup in the instance object');
+		return true;
+	}
+
+	async restoreDeviceConfigurationBackup(rebuild) {
+		const instanceId = `system.adapter.${this.namespace}`;
+		const instanceObject = await this.getForeignObjectAsync(instanceId);
+		const backup = instanceObject?.native?.deviceConfigurationBackup;
+		if (!backup || typeof backup !== 'object' || Array.isArray(backup)) {
+			return false;
+		}
+
+		const devices = Array.isArray(backup.devices) ? structuredClone(backup.devices) : [];
+		if (!devices.length) {
+			return false;
+		}
+
+		const previousDeviceIds = new Set(this.devices.map(device => device.id));
+		const restoredDeviceIds = new Set(devices.map(device => device.id));
+		this.devices = devices;
+		await this.saveDevices(devices);
+
+		if (rebuild) {
+			for (const deviceId of previousDeviceIds) {
+				if (!restoredDeviceIds.has(deviceId)) {
+					await this.deleteObjectIfExists(this.getDeviceObjectId(deviceId), { recursive: true });
+				}
+			}
+			await this.rebuildAllDevices();
+			await this.refreshSubscriptions();
+			await this.updateAllDevices();
+			await this.refreshDeviceManagerDevices();
+		}
+
+		return true;
 	}
 
 	async loadDevices() {
@@ -644,6 +731,38 @@ class Absolutehumidity extends utils.Adapter {
 			return;
 		}
 
+		if (obj.command === 'backupDeviceConfiguration') {
+			void this.backupDeviceConfiguration()
+				.then(updated => {
+					this.sendTo(
+						obj.from,
+						obj.command,
+						{ result: updated ? 'backupUpdated' : 'backupCurrent' },
+						obj.callback,
+					);
+				})
+				.catch(error => {
+					this.sendTo(obj.from, obj.command, { error: String(error) }, obj.callback);
+				});
+			return;
+		}
+
+		if (obj.command === 'restoreDeviceConfiguration') {
+			void this.restoreDeviceConfigurationBackup(true)
+				.then(restored => {
+					this.sendTo(
+						obj.from,
+						obj.command,
+						{ result: restored ? 'backupRestored' : 'backupMissing' },
+						obj.callback,
+					);
+				})
+				.catch(error => {
+					this.sendTo(obj.from, obj.command, { error: String(error) }, obj.callback);
+				});
+			return;
+		}
+
 		if (typeof obj === 'object' && obj.message) {
 			this.log.debug(`Unhandled message command: ${obj.command}`);
 		}
@@ -767,6 +886,10 @@ class Absolutehumidity extends utils.Adapter {
 	 */
 	onUnload(callback) {
 		try {
+			if (this.configurationBackupTimer) {
+				this.clearTimeout(this.configurationBackupTimer);
+				this.configurationBackupTimer = null;
+			}
 			callback();
 		} catch (error) {
 			this.log.error(`Error during unloading: ${error.message}`);
