@@ -90,7 +90,7 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 ### 0.1.2 (2026-09-20)
 * Keep the Device Manager in the adapter configuration instead of a separate Admin tab. Render the four live measurements through one shared HTML row template per card; Admin's read-only numeric state control otherwise adds a progress indicator for percent and bounded states.
 
-[Older changes can be found there](CHANGELOG_OLD.md)
+[Older changes can be found here](CHANGELOG_OLD.md)
 
 
 ## Collaboration
