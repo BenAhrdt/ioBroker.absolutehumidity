@@ -54,6 +54,13 @@ Optionally, you can specify whether these two values ​​should also be includ
 
 <img width="795" height="437" alt="image" src="https://github.com/user-attachments/assets/4160b3ec-3e49-4a5a-81ae-a826de288698" />
 
+## Tile view
+The tiles for outdoor use are displayed in green, and those for indoor use in blue.
+In the tile view, the tiles are sorted in ascending order, that is, from dry to more humid. 
+(If the green tile appears first, ventilating the room might be advisable)
+
+<img width="1147" height="428" alt="image" src="https://github.com/user-attachments/assets/b08264af-3350-4ffb-85ed-3ce7d15e2f5a" />
+
 
 ## Changelog
 <!--
