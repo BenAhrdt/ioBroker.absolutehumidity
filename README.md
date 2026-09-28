@@ -41,6 +41,18 @@ Installation Link:
 
 <img width="955" height="703" alt="image" src="https://github.com/user-attachments/assets/d7c43f37-30be-4a16-99f0-6e7e34164478" />
 
+## Create a tab in the tab bar 
+
+Use the pin to create a tab in the tab bar. Use "+ Add device" to add a device.
+
+
+<img width="747" height="621" alt="image" src="https://github.com/user-attachments/assets/ec36adbc-4e2b-4a26-85f1-34413f02d5b9" />
+
+## Add a Device
+To add a device, you must assign a name and select the two states for temperature and relative humidity. 
+Optionally, you can specify whether these two values ​​should also be included (again) in the adapter's objects.
+
+<img width="795" height="437" alt="image" src="https://github.com/user-attachments/assets/4160b3ec-3e49-4a5a-81ae-a826de288698" />
 
 
 ## Changelog
