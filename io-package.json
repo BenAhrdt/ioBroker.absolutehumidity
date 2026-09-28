@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "news": {
+      "0.1.6": {
+        "en": "Rename the visible Device Manager references to Config Manager in the adapter configuration and translations.\nAdd delayed device configuration backups with manual restore and startup recovery when no device configuration exists.",
+        "de": "Benennt die sichtbaren Device Manager-Verweise in Adapterkonfiguration und Übersetzungen um.\nFügen Sie verzögerte Backups mit manueller Wiederherstellung und Startwiederherstellung ohne Gerätekonfiguration hinzu.",
+        "ru": "Переименуйте видимые ссылки диспетчера устройств на Config Manager в конфигурации и переводах адаптера.\nДобавьте отложенное резервное копирование конфигурации устройства с ручным восстановлением и восстановлением при запуске, если конфигурация устройства отсутствует.",
+        "pt": "Renomeie as referências visíveis do Device Manager para Config Manager na configuração e tradução do adaptador.\nAdicione backups atrasados com restauração manual e recuperação de inicialização quando não houver configuração.",
+        "nl": "Hernoem de zichtbare Device Manager-verwijzingen naar Config Manager in de configuratie en vertalingen van de adapter.\nVoeg vertraagde back-ups van de apparaatconfiguratie toe met handmatig herstel en opstartherstel als er geen apparaatconfiguratie bestaat.",
+        "fr": "Renommez les références visibles du Device Manager en Config Manager dans la configuration et les traductions de l'adaptateur.\nAjoutez des sauvegardes différées de la configuration de l'appareil avec restauration manuelle et restauration au démarrage.",
+        "it": "Rinomina i riferimenti visibili a Config Manager nella configurazione e nelle traduzioni dell'adattatore.\nAggiungere backup ritardati con ripristino manuale e ripristino all'avvio in assenza di configurazione.",
+        "es": "Cambie el nombre de las referencias visibles de Device Manager a Config Manager en la configuración y traducciones del adaptador.\nAñada copias de seguridad retrasadas de la configuración del dispositivo con restauración manual y recuperación de inicio cuando no exista.",
+        "pl": "Zmień nazwę widocznych odniesień Menedżera urządzeń do Menedżera konfiguracji w konfiguracji adaptera i tłumaczeniach.\nDodaj kopie zapasowe opóźnionej konfiguracji urządzenia z ręcznym przywracaniem i odzyskiwaniem uruchamiania, gdy nie istnieje konfiguracja urządzenia.",
+        "uk": "Перейменуйте видимі посилання Диспетчера пристроїв на Диспетчер конфігурацій адаптера та перекладів.\nДодайте резервні копії з затримкою конфігурації пристрою з відновленням вручну та відновленням запуску, якщо конфігурації пристрою немає.",
+        "zh-cn": "在适配器配置和翻译中将可见的 “设备管理器” 引用重命名为 “配置管理器”。\n在不存在设备配置时，添加延迟设备配置备份，包括手动还原和启动恢复。"
+      },
       "0.1.5": {
         "en": "Update the repository-check dependencies and test the adapter on Node.js 26.",
         "de": "Aktualisieren Sie die Abhängigkeiten und testen Sie den Adapter auf Node.js 26.",
@@ -80,19 +93,6 @@
         "pl": "Gotowe do dodania do najnowszego repozytorium ioBroker",
         "uk": "Готово до додавання до останнього репозиторію ioBroker",
         "zh-cn": "已准备好添加到 ioBroker 最新仓库"
-      },
-      "0.0.6": {
-        "en": "Sort devices after refresh in case of absolute humidity",
-        "de": "Sortieren Sie die Geräte nach der Auffrischung im Falle absoluter Luftfeuchtigkeit.",
-        "ru": "После обновления отсортируйте устройства в случае повышенной абсолютной влажности.",
-        "pt": "Ordene os dispositivos após a atualização em caso de umidade absoluta.",
-        "nl": "Sorteer de apparaten na het vernieuwen in geval van extreme luchtvochtigheid.",
-        "fr": "Trier les appareils après actualisation en cas d'humidité absolue",
-        "it": "Ordina i dispositivi dopo l'aggiornamento in caso di umidità assoluta",
-        "es": "Clasifique los dispositivos después de la actualización en caso de humedad absoluta.",
-        "pl": "Posortuj urządzenia po odświeżeniu w przypadku wilgotności bezwzględnej",
-        "uk": "Сортуйте пристрої після оновлення за умови абсолютної вологості",
-        "zh-cn": "刷新后，在绝对湿度情况下对设备进行排序"
       }
     },
     "titleLang": {

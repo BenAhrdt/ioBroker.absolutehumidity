@@ -74,7 +74,7 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.6 (2026-09-28)
 * Rename the visible Device Manager references to Config Manager in the adapter configuration and translations.
 * Add delayed device configuration backups with manual restore and startup recovery when no device configuration exists.
 
@@ -89,14 +89,6 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 
 ### 0.1.2 (2026-09-20)
 * Keep the Device Manager in the adapter configuration instead of a separate Admin tab. Render the four live measurements through one shared HTML row template per card; Admin's read-only numeric state control otherwise adds a progress indicator for percent and bounded states.
-
-### 0.1.1 (2026-08-07)
-* (BenAhrdt) update dm-utils to 3.2.0
-
-[Older changes can be found there](CHANGELOG_OLD.md)
-
-
-The adapter was developed in collaboration with Joerg Froehner
 
 ## License
 MIT License
