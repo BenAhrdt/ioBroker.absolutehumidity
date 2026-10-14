@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "news": {
+      "0.1.8": {
+        "en": "Ensure that the interactive preview card labels always use the language selected in Admin, even when browser and system languages differ.",
+        "de": "Achten Sie darauf, dass die Vorschaukarten immer in der Admin-Sprache angezeigt werden, auch wenn Browser und System anders sind.",
+        "ru": "Убедитесь, что на этикетках интерактивных карточек предварительного просмотра всегда используется язык, выбранный в Admin, даже если языки браузера и системы различаются.",
+        "pt": "Os rótulos do cartão de visualização interativa sempre usem o idioma selecionado em Admin, mesmo que o navegador e o sistema sejam diferentes.",
+        "nl": "Zorg ervoor dat op de labels van de interactieve voorbeeldkaart altijd de taal wordt gebruikt die is geselecteerd in Admin, zelfs als de browser- en systeemtalen verschillen.",
+        "fr": "Veillez à ce que les libellés des cartes d'aperçu utilisent toujours la langue sélectionnée dans Admin, même si la langue du navigateur diffère.",
+        "it": "Si assicuri che le etichette interattive usino sempre la lingua selezionata in Admin, anche se le lingue del browser e del sistema sono diverse.",
+        "es": "Asegúrese de que las etiquetas de las tarjetas de vista previa interactiva usen siempre el idioma seleccionado en Admin, incluso si el navegador y el sistema son diferentes.",
+        "pl": "Upewnij się, że etykiety interaktywnych kart podglądu zawsze używają języka wybranego w programie Administrator, nawet jeśli języki przeglądarki i systemu różnią się.",
+        "uk": "Переконайтеся, що на етикетках інтерактивних карток попереднього перегляду завжди використовується мова, вибрана в Адміністраторі, навіть якщо мови браузера та системи відрізняються.",
+        "zh-cn": "确保交互式预览卡片标签始终使用管理员中选择的语言，即使浏览器和系统语言不同也是如此。"
+      },
       "0.1.7": {
         "en": "Clearly label the editable preview values as demonstration-only and explain that they are not saved.\nUse the selected Admin language for the interactive preview card labels.",
         "de": "Nennen Sie die editierbaren Vorschauwerte nur als Demo und erklären Sie, dass sie nicht gespeichert sind.\nVerwenden Sie die Admin-Sprache für die Kartenvorschau.",
@@ -80,19 +93,6 @@
         "pl": "Zachowaj Menedżera urządzeń w konfiguracji adaptera zamiast osobnej karty Administrator. Renderuj cztery pomiary na żywo za pomocą jednego współdzielonego szablonu wiersza HTML na kartę; Kontrola stanu numerycznego tylko do odczytu przez administratora dodaje wskaźnik postępu dla stanów procentowych i ograniczonych.",
         "uk": "Зберігайте Диспетчер пристроїв в конфігурації адаптера замість окремої вкладки Admin. Відтворюйте чотири вимірювання в реальному часі за допомогою одного спільного шаблону рядка HTML на картку; в іншому випадку, числовий контроль стану адміністратора, призначений лише для читання, додає індикатор прогресу для відсотків та обмежених станів.",
         "zh-cn": "将设备管理器保留在适配器配置中，而不是单独的 “管理” 选项卡。通过每张卡片的一个共享 HTML 行模板呈现四次实时测量结果；管理员的只读数字状态控件还会添加百分比和边界状态的进度指示器。"
-      },
-      "0.1.1": {
-        "en": "update dm-utils to 3.2.0",
-        "de": "update dm-utils auf 3.2.0",
-        "ru": "обновление dm-utils до 3.2.0",
-        "pt": "atualizar dm-utils para 3.2.0",
-        "nl": "update dm-utils naar 3.2.0",
-        "fr": "mettre à jour dm-utils à 3.2.0",
-        "it": "aggiornamento dm-utils a 3.2.0",
-        "es": "actualización dm-utils a 3.2.0",
-        "pl": "update dm- utils to 3.2.0",
-        "uk": "оновлення dm-utils до 3.2.0",
-        "zh-cn": "更新 dm- utils 到 3. 2. 0"
       }
     },
     "titleLang": {

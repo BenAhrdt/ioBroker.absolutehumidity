@@ -74,7 +74,7 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.8 (2026-10-14)
 * (BenAhrdt) Ensure that the interactive preview card labels always use the language selected in Admin, even when browser and system languages differ.
 
 ### 0.1.7 (2026-10-14)
@@ -90,9 +90,6 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 
 ### 0.1.4 (2026-09-21)
 * Keep long Device Manager measurements readable with a smaller value font and at most two decimal places.
-
-### 0.1.3 (2026-09-21)
-* Restore the regular adapter configuration page with interactive outdoor and indoor preview cards, and provide a link to the Device Manager in Config Manager.
 
 [Older changes can be found here](CHANGELOG_OLD.md)
 
