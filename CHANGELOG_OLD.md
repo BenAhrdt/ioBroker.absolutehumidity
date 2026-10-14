@@ -1,4 +1,7 @@
 # Older changes
+## 0.1.2 (2026-09-20)
+* Keep the Device Manager in the adapter configuration instead of a separate Admin tab. Render the four live measurements through one shared HTML row template per card; Admin's read-only numeric state control otherwise adds a progress indicator for percent and bounded states.
+
 ## 0.1.1 (2026-08-07)
 * (BenAhrdt) update dm-utils to 3.2.0
 

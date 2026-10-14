@@ -74,7 +74,7 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.7 (2026-10-14)
 * (BenAhrdt) Clearly label the editable preview values as demonstration-only and explain that they are not saved.
 * (BenAhrdt) Use the selected Admin language for the interactive preview card labels.
 
@@ -91,11 +91,7 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 ### 0.1.3 (2026-09-21)
 * Restore the regular adapter configuration page with interactive outdoor and indoor preview cards, and provide a link to the Device Manager in Config Manager.
 
-### 0.1.2 (2026-09-20)
-* Keep the Device Manager in the adapter configuration instead of a separate Admin tab. Render the four live measurements through one shared HTML row template per card; Admin's read-only numeric state control otherwise adds a progress indicator for percent and bounded states.
-
 [Older changes can be found here](CHANGELOG_OLD.md)
-
 
 ## Collaboration
 The adapter was developed in collaboration with Joerg Froehner

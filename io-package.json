@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "news": {
+      "0.1.7": {
+        "en": "Clearly label the editable preview values as demonstration-only and explain that they are not saved.\nUse the selected Admin language for the interactive preview card labels.",
+        "de": "Nennen Sie die editierbaren Vorschauwerte nur als Demo und erklären Sie, dass sie nicht gespeichert sind.\nVerwenden Sie die Admin-Sprache für die Kartenvorschau.",
+        "ru": "Четко обозначьте редактируемые значения предварительного просмотра как «только демонстрационные» и объясните, что они не сохранены.\nИспользуйте выбранный язык администратора для интерактивных наклеек карточек предварительного просмотра.",
+        "pt": "Marque claramente os valores editáveis como demonstrativos e explique que não são salvos.\nUse o idioma Admin selecionado para as etiquetas interativas.",
+        "nl": "Geef de bewerkbare voorbeeldwaarden duidelijk aan als voorbeelden en leg uit dat ze niet zijn opgeslagen.\nGebruik de geselecteerde beheertaal voor de interactieve preview-kaartlabels.",
+        "fr": "Donnez aux valeurs d'aperçu modifiables une valeur de démonstration et expliquez qu'elles ne sont pas enregistrées.\nUtilisez la langue d'administration pour les libellés interactifs des cartes.",
+        "it": "Etichetta chiaramente i valori di anteprima modificabili e spiega che non sono salvati.\nUsa la lingua Admin selezionata per le etichette di anteprima interattive.",
+        "es": "Etiquete claramente los valores editables de vista previa como de demostración y explique que no están guardados.\nUtilice el idioma de administración elegido para las tarjetas de vista previa.",
+        "pl": "Wyraźnie oznacz edytowalne wartości podglądu jako tylko dla demonstracji i wyjaśnij, że nie są zapisywane.\nUżyj wybranego języka administratora dla interaktywnych etykiet kart podglądu.",
+        "uk": "Чітко позначте редаговані значення попереднього перегляду як лише демонстраційні та поясніть, що вони не зберігаються.\nВикористовуйте вибрану мову адміністратора для інтерактивних етикеток карток попереднього перегляду.",
+        "zh-cn": "明确将可编辑的预览值标记为仅用于演示，并说明它们未保存。\n为交互式预览卡片标签使用所选的管理员语言。"
+      },
       "0.1.6": {
         "en": "Rename the visible Device Manager references to Config Manager in the adapter configuration and translations.\nAdd delayed device configuration backups with manual restore and startup recovery when no device configuration exists.",
         "de": "Benennt die sichtbaren Device Manager-Verweise in Adapterkonfiguration und Übersetzungen um.\nFügen Sie verzögerte Backups mit manueller Wiederherstellung und Startwiederherstellung ohne Gerätekonfiguration hinzu.",
@@ -80,19 +93,6 @@
         "pl": "update dm- utils to 3.2.0",
         "uk": "оновлення dm-utils до 3.2.0",
         "zh-cn": "更新 dm- utils 到 3. 2. 0"
-      },
-      "0.1.0": {
-        "en": "Ready for add to ioBroker latest repo",
-        "de": "Bereit zum Hinzufügen zum neuesten ioBroker-Repository",
-        "ru": "Готово к добавлению в последний репозиторий ioBroker.",
-        "pt": "Pronto para ser adicionado ao repositório mais recente do ioBroker.",
-        "nl": "Klaar om toe te voegen aan de nieuwste ioBroker-repository.",
-        "fr": "Prêt à être ajouté au dernier dépôt d'ioBroker",
-        "it": "Pronto per essere aggiunto al repository più recente di ioBroker",
-        "es": "Listo para agregar al repositorio más reciente de ioBroker",
-        "pl": "Gotowe do dodania do najnowszego repozytorium ioBroker",
-        "uk": "Готово до додавання до останнього репозиторію ioBroker",
-        "zh-cn": "已准备好添加到 ioBroker 最新仓库"
       }
     },
     "titleLang": {
