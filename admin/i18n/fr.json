@@ -18,6 +18,8 @@
 	"The timer starts when the adapter starts and restarts after every device configuration change. Set to 0 to disable automatic backups.": "Le minuteur démarre au démarrage de l'adaptateur et redémarre après chaque modification de la configuration du périphérique. Définissez sur 0 pour désactiver les sauvegardes automatiques.",
 	"Open adapter tab": "Ouvrir l'onglet de l'adaptateur",
 	"Manual calculation": "Calcul manuel",
+	"Interactive demo": "Démonstration interactive",
+	"The following values are for demonstration only. You can edit them to try out the calculation; they are not saved.": "Les valeurs suivantes sont uniquement destinées à la démonstration. Vous pouvez les modifier pour tester le calcul ; elles ne sont pas enregistrées.",
 	"Outdoor": "Extérieur",
 	"Indoor": "Intérieur",
 	"Add device": "Ajouter un appareil",

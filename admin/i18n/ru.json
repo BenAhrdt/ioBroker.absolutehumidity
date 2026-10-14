@@ -18,6 +18,8 @@
 	"The timer starts when the adapter starts and restarts after every device configuration change. Set to 0 to disable automatic backups.": "Таймер запускается при запуске адаптера и перезапускается после каждого изменения конфигурации устройства. Установите значение 0, чтобы отключить автоматическое резервное копирование.",
 	"Open adapter tab": "Открыть вкладку адаптера",
 	"Manual calculation": "Ручной расчет",
+	"Interactive demo": "Интерактивная демонстрация",
+	"The following values are for demonstration only. You can edit them to try out the calculation; they are not saved.": "Следующие значения предназначены только для демонстрации. Вы можете изменить их, чтобы проверить расчёт; они не сохраняются.",
 	"Outdoor": "Снаружи",
 	"Indoor": "Внутри",
 	"Add device": "Добавить устройство",

@@ -18,6 +18,8 @@
 	"The timer starts when the adapter starts and restarts after every device configuration change. Set to 0 to disable automatic backups.": "Licznik rozpoczyna pracę po uruchomieniu adaptera i uruchamia się ponownie po każdej zmianie konfiguracji urządzenia. Ustaw na 0, aby wyłączyć automatyczne tworzenie kopii zapasowych.",
 	"Open adapter tab": "Otwórz kartę adaptera",
 	"Manual calculation": "Obliczenie ręczne",
+	"Interactive demo": "Interaktywne demo",
+	"The following values are for demonstration only. You can edit them to try out the calculation; they are not saved.": "Poniższe wartości służą wyłącznie do demonstracji. Możesz je zmienić, aby wypróbować obliczenia; nie zostaną zapisane.",
 	"Outdoor": "Na zewnątrz",
 	"Indoor": "Wewnątrz",
 	"Add device": "Dodaj urządzenie",

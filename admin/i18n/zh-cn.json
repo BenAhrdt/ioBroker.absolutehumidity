@@ -18,6 +18,8 @@
 	"The timer starts when the adapter starts and restarts after every device configuration change. Set to 0 to disable automatic backups.": "计时器在适配器启动时启动，并在每次设备配置更改后重新启动。设置为 0 以禁用自动备份。",
 	"Open adapter tab": "打开适配器标签页",
 	"Manual calculation": "手动计算",
+	"Interactive demo": "交互式演示",
+	"The following values are for demonstration only. You can edit them to try out the calculation; they are not saved.": "以下数值仅用于演示。您可以修改它们来试用计算功能；这些修改不会保存。",
 	"Outdoor": "室外",
 	"Indoor": "室内",
 	"Add device": "添加设备",
