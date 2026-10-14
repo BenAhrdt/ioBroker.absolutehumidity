@@ -74,6 +74,9 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) Ensure that the interactive preview card labels always use the language selected in Admin, even when browser and system languages differ.
+
 ### 0.1.7 (2026-10-14)
 * (BenAhrdt) Clearly label the editable preview values as demonstration-only and explain that they are not saved.
 * (BenAhrdt) Use the selected Admin language for the interactive preview card labels.
