@@ -28,7 +28,9 @@ saturation vapor pressure from temperature and relative humidity.
 Small deviations from online tables are expected because different tables often
 use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 
-<img width="927" height="590" alt="image" src="https://github.com/user-attachments/assets/15aad0cf-144b-4ccb-8d38-c8d7710aab48" />
+
+<img width="908" height="627" alt="image" src="https://github.com/user-attachments/assets/849e0561-dc5d-4f99-bc29-a547481e9115" />
+
 
 
 The instance page is interactive, allowing for the calculation of absolute humidity, dew point temperature, and ventilation recommendations based on data recorded via analog or manual methods. Simply enter the values, and the result will be displayed automatically.
