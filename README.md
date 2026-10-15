@@ -33,13 +33,6 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 
 The instance page is interactive, allowing for the calculation of absolute humidity, dew point temperature, and ventilation recommendations based on data recorded via analog or manual methods. Simply enter the values, and the result will be displayed automatically.
 
-## Installation
-As long as the adapter is not yet listed in the stable repository, it can be installed manually from NPM. Note: NEVER install it from GitHub.
-
-Installation Link:
-[https://github.com/BenAhrdt/ioBroker.absolutehumidity](https://github.com/BenAhrdt/ioBroker.absolutehumidity)
-
-<img width="955" height="703" alt="image" src="https://github.com/user-attachments/assets/d7c43f37-30be-4a16-99f0-6e7e34164478" />
 
 ## Create a tab in the tab bar 
 
