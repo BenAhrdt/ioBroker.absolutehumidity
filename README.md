@@ -69,6 +69,9 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) Serialize per-device measurement updates to prevent duplicate output writes when source states change concurrently.
+
 ### 0.1.9 (2026-11-03)
 * (BenAhrdt) Accept Unicode temperature units (`℃`/`℉`) and common relative humidity units (`% rF`/`% rH`) for source states.
 

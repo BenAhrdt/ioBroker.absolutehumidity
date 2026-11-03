@@ -43,6 +43,7 @@ class Absolutehumidity extends utils.Adapter {
 		this.devices = [];
 		this.deviceManagerLanguage = 'en';
 		this.subscribedSourceIds = new Set();
+		this.deviceUpdateChains = new Map();
 		this.configurationBackupTimer = null;
 
 		this.on('ready', this.onReady.bind(this));
@@ -96,7 +97,7 @@ class Absolutehumidity extends utils.Adapter {
 		const updatedDevices = [...devices, device];
 
 		await this.ensureDeviceObjects(device);
-		await this.updateDeviceValues(device);
+		await this.enqueueDeviceUpdate(device);
 		await this.refreshSubscriptions(updatedDevices);
 		await this.saveDevices(updatedDevices);
 	}
@@ -119,7 +120,7 @@ class Absolutehumidity extends utils.Adapter {
 		}
 
 		await this.ensureDeviceObjects(device);
-		await this.updateDeviceValues(device);
+		await this.enqueueDeviceUpdate(device);
 		await this.refreshSubscriptions(updatedDevices);
 		await this.saveDevices(updatedDevices);
 	}
@@ -657,8 +658,33 @@ class Absolutehumidity extends utils.Adapter {
 
 	async updateAllDevices() {
 		for (const device of this.getConfiguredDevices()) {
-			await this.updateDeviceValues(device);
+			await this.enqueueDeviceUpdate(device);
 		}
+	}
+
+	/**
+	 * Queue updates per device so concurrent state changes cannot read and write the same outputs in parallel.
+	 *
+	 * @param {Record<string, any>} device
+	 * @returns {Promise<void>}
+	 */
+	async enqueueDeviceUpdate(device) {
+		const previous = this.deviceUpdateChains.get(device.id) || Promise.resolve();
+		const next = previous.then(
+			() => this.updateDeviceValues(device),
+			() => this.updateDeviceValues(device),
+		);
+
+		this.deviceUpdateChains.set(device.id, next);
+
+		const cleanup = () => {
+			if (this.deviceUpdateChains.get(device.id) === next) {
+				this.deviceUpdateChains.delete(device.id);
+			}
+		};
+		void next.then(cleanup, cleanup);
+
+		await next;
 	}
 
 	// If object subscriptions are needed later, enable the constructor hook and call this.subscribeObjects(...).
@@ -690,7 +716,11 @@ class Absolutehumidity extends utils.Adapter {
 		);
 
 		for (const device of affectedDevices) {
-			await this.updateDeviceValues(device);
+			try {
+				await this.enqueueDeviceUpdate(device);
+			} catch (error) {
+				this.log.warn(`Could not update device "${device.name}": ${error.message}`);
+			}
 		}
 
 		if (affectedDevices.length) {
