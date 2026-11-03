@@ -1,8 +1,54 @@
 'use strict';
 
+const vm = require('node:vm');
 const { expect } = require('chai');
-const { getDevicesSortedByAbsoluteHumidity } = require('./lib/modules/deviceManager');
+const { getDeviceFormSchema, getDevicesSortedByAbsoluteHumidity } = require('./lib/modules/deviceManager');
 const { createUpdatedDeviceId } = require('./lib/modules/idUtils');
+const {
+	isFahrenheitUnit,
+	isSupportedRelativeHumidityUnit,
+	isSupportedTemperatureUnit,
+	normalizeUnit,
+} = require('./lib/modules/sourceStateUnits');
+
+function evaluateFilter(filter, object) {
+	return vm.runInNewContext(`(obj => { ${filter} })(obj)`, { obj: object });
+}
+
+describe('source state units', () => {
+	it('normalizes Unicode temperature symbols and whitespace', () => {
+		expect(normalizeUnit(' ℃ ')).to.equal('°c');
+		expect(normalizeUnit('℉')).to.equal('°f');
+		expect(normalizeUnit('% rF')).to.equal('%rf');
+	});
+
+	it('accepts supported temperature and humidity units only', () => {
+		expect(isSupportedTemperatureUnit('℃')).to.equal(true);
+		expect(isSupportedTemperatureUnit('℉')).to.equal(true);
+		expect(isSupportedTemperatureUnit('K')).to.equal(false);
+		expect(isFahrenheitUnit('℉')).to.equal(true);
+		expect(isSupportedRelativeHumidityUnit('% rF')).to.equal(true);
+		expect(isSupportedRelativeHumidityUnit('% RH')).to.equal(true);
+		expect(isSupportedRelativeHumidityUnit('%/s')).to.equal(false);
+	});
+});
+
+describe('device form source state filters', () => {
+	const schema = getDeviceFormSchema();
+	const temperatureFilter = schema.items.temperatureStateId.filterFunc;
+	const humidityFilter = schema.items.relativeHumidityStateId.filterFunc;
+
+	it('accepts Unicode temperature units', () => {
+		expect(evaluateFilter(temperatureFilter, { type: 'state', common: { type: 'number', unit: '℃' } })).to.equal(true);
+		expect(evaluateFilter(temperatureFilter, { type: 'state', common: { type: 'number', unit: '℉' } })).to.equal(true);
+	});
+
+	it('accepts common relative humidity unit variants', () => {
+		expect(evaluateFilter(humidityFilter, { type: 'state', common: { type: 'number', unit: '% rF' } })).to.equal(true);
+		expect(evaluateFilter(humidityFilter, { type: 'state', common: { type: 'number', unit: '% RH' } })).to.equal(true);
+		expect(evaluateFilter(humidityFilter, { type: 'state', common: { type: 'number', unit: '%/s' } })).to.equal(false);
+	});
+});
 
 describe('device ID updates', () => {
 	it('should create a new ID when a device is renamed', () => {

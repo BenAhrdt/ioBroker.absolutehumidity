@@ -23,6 +23,11 @@ const {
 } = require('./lib/modules/idUtils');
 const { translate } = require('./lib/modules/i18n');
 const { configurationBackupNeedsUpdate } = require('./lib/modules/configurationBackup');
+const {
+	isFahrenheitUnit: isSupportedFahrenheitUnit,
+	isSupportedRelativeHumidityUnit: isSupportedRelativeHumiditySourceUnit,
+	isSupportedTemperatureUnit: isSupportedTemperatureSourceUnit,
+} = require('./lib/modules/sourceStateUnits');
 
 class Absolutehumidity extends utils.Adapter {
 	/**
@@ -257,36 +262,21 @@ class Absolutehumidity extends utils.Adapter {
 	 * @param {unknown} unit
 	 */
 	isSupportedTemperatureUnit(unit) {
-		const normalizedUnit = this.normalizeUnit(unit);
-
-		return (
-			normalizedUnit === '' || normalizedUnit === '°c' || normalizedUnit === 'c' || this.isFahrenheitUnit(unit)
-		);
+		return isSupportedTemperatureSourceUnit(unit);
 	}
 
 	/**
 	 * @param {unknown} unit
 	 */
 	isSupportedRelativeHumidityUnit(unit) {
-		const normalizedUnit = this.normalizeUnit(unit);
-
-		return normalizedUnit === '' || normalizedUnit === '%';
+		return isSupportedRelativeHumiditySourceUnit(unit);
 	}
 
 	/**
 	 * @param {unknown} unit
 	 */
 	isFahrenheitUnit(unit) {
-		const normalizedUnit = this.normalizeUnit(unit);
-
-		return normalizedUnit === '°f' || normalizedUnit === 'f';
-	}
-
-	/**
-	 * @param {unknown} unit
-	 */
-	normalizeUnit(unit) {
-		return typeof unit === 'string' ? unit.trim().toLowerCase().replace(/\s+/g, '') : '';
+		return isSupportedFahrenheitUnit(unit);
 	}
 
 	/**
