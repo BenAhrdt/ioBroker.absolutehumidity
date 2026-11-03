@@ -1,4 +1,7 @@
 # Older changes
+## 0.1.4 (2026-09-21)
+* Keep long Device Manager measurements readable with a smaller value font and at most two decimal places.
+
 ## 0.1.3 (2026-09-21)
 * Restore the regular adapter configuration page with interactive outdoor and indoor preview cards, and provide a link to the Device Manager in Config Manager.
 

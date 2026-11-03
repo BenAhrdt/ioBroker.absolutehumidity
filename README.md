@@ -69,7 +69,7 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.9 (2026-11-03)
 * (BenAhrdt) Accept Unicode temperature units (`℃`/`℉`) and common relative humidity units (`% rF`/`% rH`) for source states.
 
 ### 0.1.8 (2026-10-14)
@@ -85,9 +85,6 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 
 ### 0.1.5 (2026-09-27)
 * Update the repository-check dependencies and test the adapter on Node.js 26.
-
-### 0.1.4 (2026-09-21)
-* Keep long Device Manager measurements readable with a smaller value font and at most two decimal places.
 
 [Older changes can be found here](CHANGELOG_OLD.md)
 
