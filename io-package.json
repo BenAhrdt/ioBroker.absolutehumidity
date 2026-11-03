@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "news": {
+      "0.1.10": {
+        "en": "Serialize per-device measurement updates to prevent duplicate output writes when source states change concurrently.",
+        "de": "Serialisieren Sie Messwerte pro Gerät, um doppelte Ausgaben zu vermeiden, wenn sich der Quellstatus ändert.",
+        "ru": "Сериализуйте обновления измерений для каждого устройства, чтобы предотвратить дублирование выходных записей при одновременном изменении исходных состояний.",
+        "pt": "Serialize atualizações de medição por dispositivo para evitar gravações de saída duplicadas ao mesmo tempo.",
+        "nl": "Serialiseer de meetupdates per apparaat om te voorkomen dat de uitvoer dubbel wordt geschreven wanneer de bronstatus gelijktijdig wordt gewijzigd.",
+        "fr": "Sérialisez les mises à jour des mesures par appareil pour éviter les doublons en cas de modification simultanée de l'état de la source.",
+        "it": "Serializza le misurazioni per dispositivo per evitare scritture duplicate quando lo stato sorgente cambia.",
+        "es": "Serialice las mediciones por dispositivo para evitar que se duplique cuando el estado de origen cambie al mismo tiempo.",
+        "pl": "Serializuj aktualizacje pomiarów dla poszczególnych urządzeń, aby zapobiec zduplikowaniu zapisów wyjściowych, gdy stany źródłowe zmieniają się jednocześnie.",
+        "uk": "Серіалізуйте оновлення вимірювань для кожного пристрою, щоб запобігти повторному запису виводу, коли стани джерела змінюються одночасно.",
+        "zh-cn": "序列化每台设备的测量更新，以防止在源状态同时发生变化时重复写入输出。"
+      },
       "0.1.9": {
         "en": "Accept Unicode temperature units (`℃`/`℉`) and common relative humidity units (`% rF`/`% rH`) for source states.",
         "de": "Akzeptieren Sie Unicode-Temperatureinheiten (`℃ `/``) und übliche Luftfeuchteeinheiten (`% rF`/`% rH`) für Quellzustände.",
@@ -80,19 +93,6 @@
         "pl": "Długie pomiary Menedżera urządzeń są czytelne za pomocą czcionki o mniejszej wartości i co najwyżej dwóch miejsc po przecinku.",
         "uk": "Тримайте довгі вимірювання диспетчера пристроїв читабельними за допомогою шрифту меншого значення та не більше двох знаків після коми.",
         "zh-cn": "使用较小的数值字体保持设备管理器长度可读，最多保留两位小数。"
-      },
-      "0.1.3": {
-        "en": "Restore the regular adapter configuration page with interactive outdoor and indoor preview cards, and provide a link to the Device Manager in Config Manager.",
-        "de": "Stellen Sie die normale Adapterkonfigurationsseite mit interaktiven Außen- und Innenvorschaukarten wieder her und geben Sie im Config Manager einen Link.",
-        "ru": "Восстановите обычную страницу конфигурации адаптера с интерактивными картами предварительного просмотра на открытом воздухе и в помещении и укажите ссылку на диспетчер устройств в Config Manager.",
-        "pt": "Restaure a página de configuração normal do adaptador com placas de pré-visualização internas e externas e forneça um link para o Device Manager.",
-        "nl": "Herstel de normale configuratiepagina van de adapter met interactieve previewkaarten voor binnen en buiten en geef een link naar de apparaatbeheerder in Config Manager.",
-        "fr": "Restaurez la page de configuration normale de l'adaptateur avec des cartes de prévisualisation interactives, et insérez un lien vers le Device Manager dans Config Manager.",
-        "it": "Ripristini la normale pagina di configurazione dell'adattatore con schede di anteprima interattive per esterni e interni e fornisca un link a Device Manager.",
-        "es": "Restaure la página normal de configuración del adaptador con tarjetas de vista previa interactivas para exteriores e interiores y dé un enlace al Device Manager de Config Manager.",
-        "pl": "Przywróć zwykłą stronę konfiguracji adaptera za pomocą interaktywnych kart podglądu zewnętrznego i wewnętrznego oraz podaj łącze do Menedżera urządzeń w Menedżerze konfiguracji.",
-        "uk": "Відновіть звичайну сторінку конфігурації адаптера за допомогою інтерактивних карт попереднього перегляду зовнішнього та внутрішнього перегляду та надайте посилання на диспетчер пристроїв у диспетчері конфігурацій.",
-        "zh-cn": "使用交互式室外和室内预览卡恢复常规适配器配置页面，并在配置管理器中提供指向设备管理器的链接。"
       }
     },
     "titleLang": {

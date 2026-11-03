@@ -69,7 +69,7 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.10 (2026-11-03)
 * (BenAhrdt) Serialize per-device measurement updates to prevent duplicate output writes when source states change concurrently.
 
 ### 0.1.9 (2026-11-03)
@@ -85,9 +85,6 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 ### 0.1.6 (2026-09-28)
 * Rename the visible Device Manager references to Config Manager in the adapter configuration and translations.
 * Add delayed device configuration backups with manual restore and startup recovery when no device configuration exists.
-
-### 0.1.5 (2026-09-27)
-* Update the repository-check dependencies and test the adapter on Node.js 26.
 
 [Older changes can be found here](CHANGELOG_OLD.md)
 

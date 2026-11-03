@@ -1,4 +1,7 @@
 # Older changes
+## 0.1.5 (2026-09-27)
+* Update the repository-check dependencies and test the adapter on Node.js 26.
+
 ## 0.1.4 (2026-09-21)
 * Keep long Device Manager measurements readable with a smaller value font and at most two decimal places.
 
