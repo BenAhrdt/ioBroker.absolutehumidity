@@ -23,11 +23,7 @@ const {
 } = require('./lib/modules/idUtils');
 const { translate } = require('./lib/modules/i18n');
 const { configurationBackupNeedsUpdate } = require('./lib/modules/configurationBackup');
-const {
-	isFahrenheitUnit: isSupportedFahrenheitUnit,
-	isSupportedRelativeHumidityUnit: isSupportedRelativeHumiditySourceUnit,
-	isSupportedTemperatureUnit: isSupportedTemperatureSourceUnit,
-} = require('./lib/modules/sourceStateUnits');
+const { isFahrenheitUnit: isSupportedFahrenheitUnit } = require('./lib/modules/sourceStateUnits');
 
 class Absolutehumidity extends utils.Adapter {
 	/**
@@ -220,13 +216,7 @@ class Absolutehumidity extends utils.Adapter {
 	 * @returns {Promise<boolean>}
 	 */
 	async isUsableTemperatureStateId(stateId) {
-		const object = await this.getUsableSourceStateObject(stateId);
-
-		return (
-			object?.type === 'state' &&
-			object.common?.type === 'number' &&
-			this.isSupportedTemperatureUnit(object.common.unit)
-		);
+		return this.isUsableSourceStateId(stateId);
 	}
 
 	/**
@@ -234,13 +224,7 @@ class Absolutehumidity extends utils.Adapter {
 	 * @returns {Promise<boolean>}
 	 */
 	async isUsableRelativeHumidityStateId(stateId) {
-		const object = await this.getUsableSourceStateObject(stateId);
-
-		return (
-			object?.type === 'state' &&
-			object.common?.type === 'number' &&
-			this.isSupportedRelativeHumidityUnit(object.common.unit)
-		);
+		return this.isUsableSourceStateId(stateId);
 	}
 
 	/**
@@ -257,20 +241,6 @@ class Absolutehumidity extends utils.Adapter {
 			this.log.warn(`Cannot validate state ID "${stateId}": ${error.message}`);
 			return null;
 		}
-	}
-
-	/**
-	 * @param {unknown} unit
-	 */
-	isSupportedTemperatureUnit(unit) {
-		return isSupportedTemperatureSourceUnit(unit);
-	}
-
-	/**
-	 * @param {unknown} unit
-	 */
-	isSupportedRelativeHumidityUnit(unit) {
-		return isSupportedRelativeHumiditySourceUnit(unit);
 	}
 
 	/**

@@ -69,6 +69,9 @@ In the tile view, the tiles are sorted in ascending order, that is, from dry to 
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) Filter temperature and relative-humidity source states by `state`, numeric `common.type`, and unit prefixes. Temperature accepts an empty unit or prefixes `°`, `C`, and `F`; NFKC normalization includes `℃`/`℉`. Relative humidity accepts an empty unit or `%`, including fullwidth `％`. Manually entered IDs only require a numeric state. Fahrenheit sources with `°F...`, `℉...`, or `F...` are converted to Celsius before calculation; generated states and the Config Manager tile display Celsius.
+
 ### 0.1.10 (2026-11-03)
 * (BenAhrdt) Serialize per-device measurement updates to prevent duplicate output writes when source states change concurrently.
 

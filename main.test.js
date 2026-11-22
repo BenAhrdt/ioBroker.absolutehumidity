@@ -20,16 +20,23 @@ describe('source state units', () => {
 		expect(normalizeUnit(' ℃ ')).to.equal('°c');
 		expect(normalizeUnit('℉')).to.equal('°f');
 		expect(normalizeUnit('% rF')).to.equal('%rf');
+		expect(normalizeUnit('％RH')).to.equal('%rh');
 	});
 
-	it('accepts supported temperature and humidity units only', () => {
+	it('accepts temperature prefixes and percent humidity units', () => {
+		expect(isSupportedTemperatureUnit('°')).to.equal(true);
+		expect(isSupportedTemperatureUnit('°Celsius')).to.equal(true);
 		expect(isSupportedTemperatureUnit('℃')).to.equal(true);
 		expect(isSupportedTemperatureUnit('℉')).to.equal(true);
+		expect(isSupportedTemperatureUnit('Celsius')).to.equal(true);
+		expect(isSupportedTemperatureUnit('Fahrenheit')).to.equal(true);
 		expect(isSupportedTemperatureUnit('K')).to.equal(false);
 		expect(isFahrenheitUnit('℉')).to.equal(true);
 		expect(isSupportedRelativeHumidityUnit('% rF')).to.equal(true);
 		expect(isSupportedRelativeHumidityUnit('% RH')).to.equal(true);
-		expect(isSupportedRelativeHumidityUnit('%/s')).to.equal(false);
+		expect(isSupportedRelativeHumidityUnit('%/s')).to.equal(true);
+		expect(isSupportedRelativeHumidityUnit('％RH')).to.equal(true);
+		expect(isSupportedRelativeHumidityUnit('g/m³')).to.equal(false);
 	});
 });
 
@@ -38,15 +45,24 @@ describe('device form source state filters', () => {
 	const temperatureFilter = schema.items.temperatureStateId.filterFunc;
 	const humidityFilter = schema.items.relativeHumidityStateId.filterFunc;
 
-	it('accepts Unicode temperature units', () => {
+	it('accepts temperature prefixes', () => {
+		expect(evaluateFilter(temperatureFilter, { type: 'state', common: { type: 'number', unit: '°' } })).to.equal(true);
+		expect(evaluateFilter(temperatureFilter, { type: 'state', common: { type: 'number', unit: '°Celsius' } })).to.equal(true);
 		expect(evaluateFilter(temperatureFilter, { type: 'state', common: { type: 'number', unit: '℃' } })).to.equal(true);
 		expect(evaluateFilter(temperatureFilter, { type: 'state', common: { type: 'number', unit: '℉' } })).to.equal(true);
+		expect(evaluateFilter(temperatureFilter, { type: 'state', common: { type: 'number', unit: 'Celsius' } })).to.equal(true);
+		expect(evaluateFilter(temperatureFilter, { type: 'state', common: { type: 'number', unit: 'Fahrenheit' } })).to.equal(true);
+		expect(evaluateFilter(temperatureFilter, { type: 'state', common: { type: 'number', unit: 'K' } })).to.equal(false);
+		expect(evaluateFilter(temperatureFilter, { type: 'state', common: { type: 'string', unit: '°C' } })).to.equal(false);
 	});
 
-	it('accepts common relative humidity unit variants', () => {
+	it('accepts percent relative humidity unit prefixes', () => {
 		expect(evaluateFilter(humidityFilter, { type: 'state', common: { type: 'number', unit: '% rF' } })).to.equal(true);
 		expect(evaluateFilter(humidityFilter, { type: 'state', common: { type: 'number', unit: '% RH' } })).to.equal(true);
-		expect(evaluateFilter(humidityFilter, { type: 'state', common: { type: 'number', unit: '%/s' } })).to.equal(false);
+		expect(evaluateFilter(humidityFilter, { type: 'state', common: { type: 'number', unit: '%/s' } })).to.equal(true);
+		expect(evaluateFilter(humidityFilter, { type: 'state', common: { type: 'number', unit: '％RH' } })).to.equal(true);
+		expect(evaluateFilter(humidityFilter, { type: 'state', common: { type: 'number', unit: 'g/m³' } })).to.equal(false);
+		expect(evaluateFilter(humidityFilter, { type: 'state', common: { type: 'boolean', unit: '%' } })).to.equal(false);
 	});
 });
 
