@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "news": {
+      "0.1.11": {
+        "en": "Filter temperature and relative-humidity source states by `state`, numeric `common.type`, and unit prefixes. Temperature accepts an empty unit or prefixes `°`, `C`, and `F`; NFKC normalization includes `℃`/`℉`. Relative humidity accepts an empty unit or `%`, including fullwidth `％`. Manually entered IDs only require a numeric state. Fahrenheit sources with `°F...`, `℉...`, or `F...` are converted to Celsius before calculation; generated states and the Config Manager tile display Celsius.",
+        "de": "Filtert Temperatur und Feuchte nach „state“, numerischem „common.type“ und Einheitenpräfixen. Temperatur akzeptiert leere Einheiten oder Präfixe `°`, `C` und `F`; NFKC-Normalisierung umfasst Relative Feuchte akzeptiert leere Einheiten oder `%`, auch in voller Breite. Manuell eingegebene IDs müssen nur numerisch sein. Fahrenheit-Quellen mit `°F... `, ``oder `F...` werden vor der Berechnung in Celsius umgerechnet; generierte Zustände und die Config Manager-Kachel zeigen Celsius an.",
+        "ru": "Отфильтруйте состояния источника температуры и относительной влажности по префиксам `state`, числовым `common.type` и единицам измерения. Температура принимает пустые единицы измерения или префиксы `°`, `C` и `F`; нормализация NFKC включает `℃`/``. Относительная влажность принимается за пустую единицу измерения или «%», включая значение «0,2%» по всей ширине. Для введенных вручную идентификаторов требуется только числовое состояние. Источники по Фаренгейту с значениями «°F...», «℉...» или «F...» перед вычислением преобразуются в градусы Цельсия; сгенерированные состояния и плитка Config Manager отображают градусы Цельсия.",
+        "pt": "Filtre os estados das fontes de temperatura e umidade relativa por `state`, `common.type` e prefixos de unidade. A temperatura aceita uma unidade vazia ou prefixos `°`, `C` e `F`; a normalização NFKC inclui `℃`/`. A umidade relativa aceita uma unidade vazia ou `%`, incluindo `2`. IDs manualmente só exigem um estado numérico. Fontes Fahrenheit com `°F... `, `℉...` ou `F... `são convertidas em Celsius antes do cálculo; os estados gerados e o quadro do Config Manager exibem Celsius.",
+        "nl": "De bronstatussen van de filtertemperatuur en de relatieve vochtigheid worden bepaald op basis van „state”, numeriek „common.type” en eenheidsprefixen. De temperatuur accepteert een lege eenheid of de voorvoegsels `°`, `C` en `F`; de NFKC-normalisatie omvat `℃`/``. De relatieve luchtvochtigheid accepteert een lege eenheid of `%`, met inbegrip van de volledige breedte van de eenheid. Handmatig ingevoerde ID's hebben alleen een numerieke status nodig. Fahrenheit-bronnen met `°F... `, `℉...` of `F... `worden vóór de berekening omgerekend naar Celsius; de gegenereerde toestanden en de Config Manager-tegel geven Celsius weer.",
+        "fr": "Filtrez les états des sources de température et d'humidité relative par « state », « common.type » numérique et préfixe unitaire. La température accepte une unité vide ou les préfixes «° », « C » et « F » ; la normalisation NFKC inclut « ℃ » /« ». L'humidité relative accepte une unité vide ou « % », y compris la largeur totale. Les ID saisis manuellement ne nécessitent qu'un chiffre. Les sources Fahrenheit indiquant « °F... », « F... » ou « F... » sont converties en degrés Celsius avant le calcul ; les états générés et la vignette Config Manager affichent Celsius.",
+        "it": "Filtra gli stati sorgente di temperatura e umidità relativa per «stato», «common.type» e prefissi unitari. La temperatura accetta unità o prefissi vuoti `°`, `C` e `F`; la normalizzazione NFKC include `℃`/`. L'umidità relativa accetta un'unità vuota o «%», inclusa la larghezza intera. Gli ID inseriti a mano richiedono solo numeri. Le sorgenti Fahrenheit con `°F... `, `℉...` o `F... `vengono convertite in Celsius prima del calcolo; gli stati generati e il riquadro Config Manager sono Celsius.",
+        "es": "Filtre los estados fuente de temperatura y humedad relativa por prefijos de «estado», «tipo común» numérico y de unidad. La temperatura acepta una unidad vacía o los prefijos °°, C y F; la normalización de NFC incluye ℃ `/``. La humedad relativa acepta una unidad vacía o `%`, incluido el ancho total. Los ID introducidos manualmente solo requieren números. Las fuentes Fahrenheit con °F..., o F... se convierten a grados Celsius antes del cálculo; los estados generados y el icono de Config Manager muestran grados Celsius.",
+        "pl": "Filtruj stany źródła temperatury i wilgotności względnej według „stanu”, numerycznego „typowego typu” i przedrostków jednostkowych. Temperatura przyjmuje pustą jednostkę lub przedrostki `°`, `C` i `F`; normalizacja NFKC obejmuje `℃`/`` `. Wilgotność względna akceptuje pustą jednostkę lub `%`, w tym pełnej szerokości `%`. Ręcznie wprowadzane identyfikatory wymagają jedynie stanu liczbowego. Źródła Fahrenheita z `°F... `, `℉...` lub `F... `są przeliczane na Celsjusz przed obliczeniem; generowane stany i kafelek Menedżer konfiguracji wyświetlają Celsjusz.",
+        "uk": "Фільтруйте стани джерела температури та відносної вологості за `стан`, числовим `common.type` та префіксами одиниць. Температура приймає порожню одиницю або префікси `°`, `C` і `F`; Нормалізація NFKC включає `℃`/``. Відносна вологість приймає порожню одиницю або `% `, включаючи повну ширину `％`. Введені вручну ідентифікатори вимагають лише числового стану. Джерела за Фаренгейтом з `°F... `, `℉...` або `F... `перетворюються на Цельсій перед обчисленням; сформовані стани та плитка Config Manager відображають Цельсій.",
+        "zh-cn": "通过 “状态”、数字 “common.type” 和单位前缀过滤温度和相对湿度源状态。温度接受空单位或前缀 `°`、`C` 和 `F`；NFKC 标准化包括 `℃`/```。相对湿度接受空单位或 “%”，包括全角 `％`。手动输入的 ID 只需要数字状态。带有 `°F... `、`F...` 或 `F... `的华氏度源在计算之前会转换为摄氏度；生成的状态和配置管理器图块显示摄氏度。"
+      },
       "0.1.10": {
         "en": "Serialize per-device measurement updates to prevent duplicate output writes when source states change concurrently.",
         "de": "Serialisieren Sie Messwerte pro Gerät, um doppelte Ausgaben zu vermeiden, wenn sich der Quellstatus ändert.",
@@ -80,19 +93,6 @@
         "pl": "Zaktualizuj zależności sprawdzania repozytorium i przetestuj adapter na Node.js 26.",
         "uk": "Оновіть залежності перевірки сховища та протестуйте адаптер на Node.js 26.",
         "zh-cn": "在 Node.js 26 上更新存储库检查依赖关系并测试适配器。"
-      },
-      "0.1.4": {
-        "en": "Keep long Device Manager measurements readable with a smaller value font and at most two decimal places.",
-        "de": "Halten Sie lange Device Manager-Messungen mit kleinerer Schrift und maximal 2 Dezimalstellen lesbar.",
-        "ru": "Для чтения длинных измерений в диспетчере устройств используйте шрифт меньшего размера и не более двух десятичных знаков.",
-        "pt": "Leve medidas longas do Device Manager com uma fonte menor e no máximo duas casas decimais.",
-        "nl": "Houd lange metingen van de Device Manager leesbaar met een lettertype met een kleinere waarde en maximaal twee cijfers achter de komma.",
-        "fr": "Gardez les mesures longues du Device Manager lisibles avec une petite valeur et au plus deux décimales.",
-        "it": "Mantieni le misure lunghe di Device Manager leggibili con caratteri più piccoli e al massimo due decimali.",
-        "es": "Mantenga las medidas largas de Device Manager legibles con una fuente de valores más pequeños y como máximo dos decimales.",
-        "pl": "Długie pomiary Menedżera urządzeń są czytelne za pomocą czcionki o mniejszej wartości i co najwyżej dwóch miejsc po przecinku.",
-        "uk": "Тримайте довгі вимірювання диспетчера пристроїв читабельними за допомогою шрифту меншого значення та не більше двох знаків після коми.",
-        "zh-cn": "使用较小的数值字体保持设备管理器长度可读，最多保留两位小数。"
       }
     },
     "titleLang": {

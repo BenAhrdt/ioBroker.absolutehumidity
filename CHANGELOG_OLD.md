@@ -1,4 +1,8 @@
 # Older changes
+## 0.1.6 (2026-09-28)
+* Rename the visible Device Manager references to Config Manager in the adapter configuration and translations.
+* Add delayed device configuration backups with manual restore and startup recovery when no device configuration exists.
+
 ## 0.1.5 (2026-09-27)
 * Update the repository-check dependencies and test the adapter on Node.js 26.
 

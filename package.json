@@ -1,6 +1,6 @@
 {
   "name": "iobroker.absolutehumidity",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "build absolute humidity from actual temperature and relative humidity",
   "author": {
     "name": "BenAhrdt",
